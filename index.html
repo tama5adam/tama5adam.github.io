@@ -3,9 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Data Visualisation (Vega-Lite)</title>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    .charts { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; }
+    .chart-container { padding: 16px; border: 1px solid #ddd; border-radius: 8px; }
+  </style>
 </head>
 <body>
-  
+  <h1>Data Visualisation</h1>
+  <div class="charts">
+    <div class="chart-container"><h2>Bar Chart</h2><div id="bar"></div></div>
+    <div class="chart-container"><h2>Line Chart</h2><div id="line"></div></div>
+    <div class="chart-container"><h2>Pie Chart</h2><div id="pie"></div></div>
+    <div class="chart-container"><h2>Scatter Plot</h2><div id="scatter"></div></div>
+    <div class="chart-container"><h2>Area Chart</h2><div id="area"></div></div>
+  </div>
+
+  <script>
+    vegaEmbed('#bar', 'data/bar.json', { actions: false });
+    vegaEmbed('#line', 'data/line.json', { actions: false });
+    vegaEmbed('#pie', 'data/pie.json', { actions: false });
+    vegaEmbed('#scatter', 'data/scatter.json', { actions: false });
+    vegaEmbed('#area', 'data/area.json', { actions: false });
+  </script>
 </body>
 </html>

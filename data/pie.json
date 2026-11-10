@@ -1,0 +1,15 @@
+{
+  "labels": ["Red", "Blue", "Yellow", "Green", "Purple"],
+  "datasets": [
+    {
+      "data": [30, 25, 15, 20, 10],
+      "backgroundColor": [
+        "#ff6384",
+        "#36a2eb",
+        "#ffce56",
+        "#4bc0c0",
+        "#9966ff"
+      ]
+    }
+  ]
+}
