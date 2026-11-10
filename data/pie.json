@@ -1,15 +1,18 @@
 {
-  "labels": ["Red", "Blue", "Yellow", "Green", "Purple"],
-  "datasets": [
-    {
-      "data": [30, 25, 15, 20, 10],
-      "backgroundColor": [
-        "#ff6384",
-        "#36a2eb",
-        "#ffce56",
-        "#4bc0c0",
-        "#9966ff"
-      ]
-    }
-  ]
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Pie chart with random data.",
+  "data": {
+    "values": [
+      {"category": "Alpha", "value": 30},
+      {"category": "Beta", "value": 20},
+      {"category": "Gamma", "value": 25},
+      {"category": "Delta", "value": 15},
+      {"category": "Epsilon", "value": 10}
+    ]
+  },
+  "mark": {"type": "arc"},
+  "encoding": {
+    "theta": {"field": "value", "type": "quantitative"},
+    "color": {"field": "category", "type": "nominal"}
+  }
 }

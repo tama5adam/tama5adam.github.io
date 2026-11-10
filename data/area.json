@@ -1,0 +1,19 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Area chart with random data.",
+  "data": {
+    "values": [
+      {"month": "Jan", "value": 10},
+      {"month": "Feb", "value": 22},
+      {"month": "Mar", "value": 17},
+      {"month": "Apr", "value": 28},
+      {"month": "May", "value": 35},
+      {"month": "Jun", "value": 30}
+    ]
+  },
+  "mark": "area",
+  "encoding": {
+    "x": {"field": "month", "type": "ordinal", "sort": ["Jan", "Feb", "Mar", "Apr", "May", "Jun"]},
+    "y": {"field": "value", "type": "quantitative"}
+  }
+}

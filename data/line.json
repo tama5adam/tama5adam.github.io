@@ -1,13 +1,20 @@
 {
-  "labels": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
-  "datasets": [
-    {
-      "label": "Visitors",
-      "data": [65, 59, 80, 81, 56, 95, 88],
-      "borderColor": "rgba(75, 192, 192, 1)",
-      "backgroundColor": "rgba(75, 192, 192, 0.2)",
-      "fill": true,
-      "tension": 0.3
-    }
-  ]
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Line chart with random data.",
+  "data": {
+    "values": [
+      {"day": "Mon", "value": 12},
+      {"day": "Tue", "value": 25},
+      {"day": "Wed", "value": 18},
+      {"day": "Thu", "value": 32},
+      {"day": "Fri", "value": 27},
+      {"day": "Sat", "value": 40},
+      {"day": "Sun", "value": 35}
+    ]
+  },
+  "mark": {"type": "line", "point": true},
+  "encoding": {
+    "x": {"field": "day", "type": "ordinal", "sort": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]},
+    "y": {"field": "value", "type": "quantitative"}
+  }
 }
